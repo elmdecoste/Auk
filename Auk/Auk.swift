@@ -444,6 +444,20 @@ public class Auk {
     pageIndicatorContainer = container
     container.setup(settings, scrollView: scrollView)
   }
+    
+  public func showPageIndicator() {
+        
+    guard let indicator = pageIndicatorContainer else { return }
+    indicator.layer.opacity = 1
+        
+  }
+    
+  public func hidePageIndicator() {
+        
+    guard let indicator = pageIndicatorContainer else { return }
+    indicator.layer.opacity = 0
+        
+  }
   
   /// Show the number of pages and indicate the current page on the page indicator.
   func updatePageIndicator() {
